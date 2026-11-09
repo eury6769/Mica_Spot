@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Mica Spot - Log in</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <body>
+            <main>
+                <div class="main-container">
+                    <h1>
+                        Mica Spot
+                    </h1>
+
+                    <div class="tabs">
+                        <label for="user">User</label>
+                        <label for="owner">Owner</label>
+                    </div>
+
+                    <input type="radio" 
+                    name="account" 
+                    id="user"
+                    checked
+                    >
+
+                    <input type="radio"
+                    name="account"
+                    id="owner"
+                    >
+
+                    <!--wala pa action papuntang home page-->
+                    <form class="form form-user" action="" method="get">
+                        <section>
+                            <h2>
+                                User Log in
+                            </h2>
+
+                            <label for="username">Username
+                                <input type="text"
+                                name="username"
+                                required
+                                placeholder="Enter your username"
+                                >
+                            </label>
+
+                            <label for="password">Password
+                                <input type="password"
+                                name="password"
+                                required
+                                placeholder="Enter your password"
+                                >
+                            </label>
+                        </section>
+
+                        <button type="submit" class="small-button">Log in</button>
+
+                        <p class="ask">No account yet?</p>
+                        <a class="smol-button" href="Sign-up-Form.html">Sign up</a>
+                    </form>
+
+                    <!--wala pa action papuntang home page-->
+                    <form class="form form-owner" action="" method="get">
+                        <section>
+                            <h2>
+                                Owner Log in
+                            </h2>
+
+                            <label for="username">Username
+                                <input type="text"
+                                name="username"
+                                required
+                                placeholder="Enter your username"
+                                >
+                            </label>
+
+                            <label for="password">Password
+                                <input type="password"
+                                name="password"
+                                required
+                                placeholder="Enter your password"
+                                >
+                            </label>
+                        </section>
+
+                        <button type="submit" class="small-button">Log in</button>
+
+                        <p class="ask">No account yet?</p>
+                        <a class="smol-button" href="Sign-up-Form.html">Sign up</a>
+                    </form>
+                </div>
+            </main>
+
+            <footer>
+
+            </footer>
+        </body>
+    </html>
