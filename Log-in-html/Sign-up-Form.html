@@ -8,17 +8,18 @@
         </head>
 
         <body>
-            <main>
-                <div class="main-container">
-                    <section>
+            <div class="frame">
+                <header class="bar">
+                    <img src="../Assets/mica-spots_logo.jpg" 
+                    alt="Mica Spots Logo"
+                    class="logo">
+                </header>
+
+                <main>
+                    <div class="main-container">
                         <h1>
                             Mica Spot
                         </h1>
-
-                        <div class="tabs">
-                            <label for="user">User</label>
-                            <label for="owner">Owner</label>
-                        </div>
 
                         <input type="radio" 
                         name="account" 
@@ -30,100 +31,108 @@
                         name="account"
                         id="owner"
                         >
-                    </section>
 
-                    <!--wala pa action papuntang home page-->
-                    <form class="form form-user" action="" method="get">
-                        <section>
+                        <div class="tabs">
+                            <label for="user">User</label>
+                            <label for="owner">Owner</label>
+                        </div>
+
+                        <!--wala pa action papuntang home page-->
+                        <form class="form form-user" action="" method="get">
                             <h2>
                                 User Details
                             </h2>
 
-                            <label for="username">Username
+                            <label for="username">
                                 <input type="text"
                                 name="username"
                                 required
+                                placeholder="Enter your username"
                                 >
                             </label>
 
-                            <label for="password">Password
+                            <label for="password">
                                 <input type="password"
                                 name="password"
                                 required
+                                placeholder="Enter your password"
                                 >
                             </label>
 
-                            <label for="gmail">Gmail
+                            <label for="gmail">
                                 <input type="email"
                                 name="gmail"
                                 required
+                                placeholder="Enter your gmail"
                                 >
                             </label>
 
-                            <label for="num">Contact Number
+                            <label for="num">
                                 <input type="tel"
                                 name="num"
                                 required
+                                placeholder="Enter your contact number"
                                 >
                             </label>
 
                             <button type="submit" class="small-button">Sign up</button>
+                            <p class="ask">Already have an account?<a class="smol-button" href="Log-in-Form.html">
+                             Back to Login</a></p>
+                        </form>
 
-                            <p class="ask">Already have an account?</p>
-                            <a class="smol-button" href="Log-in-Form.html">Back to Login</a>
-                        </section>
-                    </form>
-
-                    <!--wala pa action papuntang home page-->
-                    <form class="form form-owner" action="" method="get">
-                        <section>
+                        <!--wala pa action papuntang home page-->
+                        <form class="form form-owner" action="" method="get">
                             <h2>
                                 Owner Details
                             </h2>
 
-                            <label for="username">Username
+                            <label for="username">
                                 <input type="text"
                                 name="username"
                                 required
+                                placeholder="Enter your username"
                                 >
                             </label>
 
-                            <label for="password">Password
+                            <label for="password">
                                 <input type="password"
                                 name="password"
                                 required
+                                placeholder="Enter your password"
                                 >
                             </label>
 
-                            <label for="gmail">Gmail
+                            <label for="gmail">
                                 <input type="email"
                                 name="gmail"
                                 required
+                                placeholder="Enter your gmail"
                                 >
                             </label>
 
-                            <label for="num">Contact Number
+                            <label for="num">
                                 <input type="tel"
                                 name="num"
                                 required
+                                placeholder="Enter your contact number"
                                 >
                             </label>
 
-                            <label for="business">Business Name
+                            <label for="business">
                                 <input type="text"
                                 name="business"
                                 required
+                                placeholder="Enter your business name"
                                 >
                             </label>
 
                             <button type="submit" class="small-button">Sign up</button>
-
-                            <p class="ask">Already have an account?</p>
-                            <a class="smol-button" href="Log-in-Form.html">Back to Login</a>
-                        </section>
-                    </form>
-                </div>
-            </main>
+                            <p class="ask">Already have an account?<a class="smol-button" href="Log-in-Form.html">
+                             Back to Login</a></p>
+                        </form>
+                    </div>
+                </main>
+            </div>
 
             <footer>
 

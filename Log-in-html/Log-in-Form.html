@@ -8,36 +8,42 @@
         </head>
 
         <body>
-            <main>
-                <div class="main-container">
-                    <h1>
-                        Mica Spot
-                    </h1>
+            <div class="frame">
+                <header class="bar">
+                    <img src="../Assets/mica-spots_logo.jpg" 
+                    alt="Mica Spots Logo"
+                    class="logo">
+                </header>
 
-                    <div class="tabs">
-                        <label for="user">User</label>
-                        <label for="owner">Owner</label>
-                    </div>
+                <main>
+                    <div class="main-container">                  
+                        <h1>
+                            Mica Spot
+                        </h1>
 
-                    <input type="radio" 
-                    name="account" 
-                    id="user"
-                    checked
-                    >
+                        <input type="radio" 
+                        name="account" 
+                        id="user"
+                        checked
+                        >
 
-                    <input type="radio"
-                    name="account"
-                    id="owner"
-                    >
+                        <input type="radio"
+                        name="account"
+                        id="owner"
+                        >
 
-                    <!--wala pa action papuntang home page-->
-                    <form class="form form-user" action="" method="get">
-                        <section>
+                        <div class="tabs">
+                            <label for="user">User</label>
+                            <label for="owner">Owner</label>
+                        </div>
+
+                        <!--wala pa action papuntang home page-->
+                        <form class="form form-user" action="" method="get">
                             <h2>
                                 User Log in
                             </h2>
 
-                            <label for="username">Username
+                            <label>
                                 <input type="text"
                                 name="username"
                                 required
@@ -45,29 +51,26 @@
                                 >
                             </label>
 
-                            <label for="password">Password
+                            <label>
                                 <input type="password"
                                 name="password"
                                 required
                                 placeholder="Enter your password"
                                 >
                             </label>
-                        </section>
 
-                        <button type="submit" class="small-button">Log in</button>
+                            <button type="submit" class="small-button">Log in</button>
+                            <p class="ask">No account yet? <a class="smol-button" href="Sign-up-Form.html">
+                            Sign up</a></p>
+                        </form>
 
-                        <p class="ask">No account yet?</p>
-                        <a class="smol-button" href="Sign-up-Form.html">Sign up</a>
-                    </form>
-
-                    <!--wala pa action papuntang home page-->
-                    <form class="form form-owner" action="" method="get">
-                        <section>
+                        <!--wala pa action papuntang home page-->
+                        <form class="form form-owner" action="" method="get">
                             <h2>
                                 Owner Log in
                             </h2>
 
-                            <label for="username">Username
+                            <label>
                                 <input type="text"
                                 name="username"
                                 required
@@ -75,25 +78,24 @@
                                 >
                             </label>
 
-                            <label for="password">Password
+                            <label>
                                 <input type="password"
                                 name="password"
                                 required
                                 placeholder="Enter your password"
                                 >
                             </label>
-                        </section>
 
-                        <button type="submit" class="small-button">Log in</button>
-
-                        <p class="ask">No account yet?</p>
-                        <a class="smol-button" href="Sign-up-Form.html">Sign up</a>
-                    </form>
-                </div>
-            </main>
+                            <button type="submit" class="small-button">Log in</button>
+                            <p class="ask">No account yet? <a class="smol-button" href="Sign-up-Form.html">
+                            Sign up</a></p>
+                        </form>
+                    </div>
+                </main>
+            </div>
 
             <footer>
-
+                
             </footer>
         </body>
     </html>
