@@ -9,54 +9,54 @@
     
     <body class="web">
         <header class="navbar">
-            <a href="../User Homepage/user-homepage.html" class="logo">
+            <a href="../Owner Homepage/owner-homepage.html" class="logo">
                 <img src="../Assets/mica-spot-logo.png" 
                 alt="Mica Spot Logo"
                 >
             </a>
 
             <nav class="nav-links">
-                <a href="../User Homepage/user-homepage.html">Home</a>
-                <a href="../User Homepage/user-about.html">About</a>
+                <a href="../Owner Homepage/owner-homepage.html">Home</a>
+                <a href="../Owner Homepage/owner-about.html">About</a>
             </nav>
 
                 <a class="settings" 
-                href="./user-dashboard.html" 
+                href="./owner-dashboard.html" 
                 aria-label="My Account"></a>
         </header>
 
         <div class="dash-layout">
             <aside class="dash-sidebar">
-                <a class="button" href="#">DashBoard</a>
-                <a class="button" href="#">Manage Products</a>
-                <a class="lgt-button" href="./account-info.html" aria-current="page">Bussiness Information</a>
-                <a class="lgt-button" href="../Owner Dashboard/verification.html" >Verificaton</a>
+                <a class="button" href="./owner-dashboard.html">Dashboard</a>
+                <a class="button" href="./manage-products.html">Manage Products</a>
+                <a class="lgt-button" href="./business-info.html" aria-current="page">Business Information</a>
+                <a class="lgt-button" href="./verification.html" >Verification</a>
                 <a class="lgt-button" href="../index.html">Log Out</a>
             </aside>
 
             <main class="info-main">
                 <section class="info-container">
-                    <h1>Account Infomation</h1>
+                    <h1>Business Infomation</h1>
 
                     <form class="info-form" id="info">
 
                         <div class="field">
                             <div class="left-column">
                                 <div class="group">
-                                    <label for="name">Bussiness Name</label>
+                                    <label for="name">Business Name</label>
                                     <input type="text" 
                                     id="name" 
                                     name="name"
-                                    placeholder="Tindahan ni reze"
+                                    placeholder="Business Name"
                                     >
                                 </div>
 
                                 <div class="group">
-                                    <label for="pass">Address</label>
-                                    <input type="password"
-                                    id="pass"
-                                    name="pass"
-                                    placeholder="Ohio 67 st."
+                                    <label for="adr">Address</label>
+                                    <input type="text"
+                                    id="adr"
+                                    name="adr"
+                                    placeholder="Address"
                                     >
                                 </div>
 
@@ -65,7 +65,7 @@
                                     <input type="email"
                                     id="gmail"
                                     name="gmail"
-                                    placeholder="5am-7pm"
+                                    placeholder="Opening Hours"
                                     >
                                 </div>
                             </div>
@@ -73,34 +73,28 @@
                             <div class="right-column">
                                 <div class="group">
                                     <label for="user">Username</label>
-                                    <input type="tel"
-                                    id="num"
-                                    name="num"
-                                    placeholder="Jcooked123"
+                                    <input type="text"
+                                    id="user"
+                                    name="user"
+                                    placeholder="Username"
                                     >
-                                </div>
-                                
+                                </div>  
                                 
                                 <div class="group">
                                     <label for="pass">Password</label>
                                     <input type="password"
                                     id="pass"
                                     name="pass"
-                                    placeholder="*********"
+                                    placeholder="Password"
                                     >
                                 </div>
+
                                 <div class="form-group">
                                      <label class="form-label">Location</label>
-                                     <a 
-                                         href="https://www.google.com/maps/search/?api=1&query=456+Esmiringhoy+St." 
-                                         target="_blank" 
-                                          rel="noopener noreferrer" 
-                                             class="btn-maps" >Open in Google Maps
-                                    </a>
-                                </div>
-                                
+                                     <a href="#" class="btn-maps" >Open in Google Maps</a>
+                                </div>          
 
-                                <div class="action">
+                                <div class="actions">
                                     <button type="button" class="edit-btn">
                                         Edit
                                     </button>
