@@ -52,7 +52,7 @@ h1 {
     padding: 0 80px;
 }
 
-/* log in / sign up */
+/* LOG IN / SIGN UP */
 .brand {
     text-align: center;
 }
@@ -279,7 +279,7 @@ input[type="radio"] {
     margin-left: 5px;
 }
 
-/* Navigation Bar */
+/* NAVIGATION BAR */
 .web {
     display: flex;
     flex-direction: column;
@@ -351,7 +351,7 @@ input[type="radio"] {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23AE1D1D'%3E%3Ccircle cx='12' cy='8' r='4.5'/%3E%3Cpath d='M3.5 21c0-4.5 3.8-7 8.5-7s8.5 2.5 8.5 7z'/%3E%3C/svg%3E") center / 36px no-repeat;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
@@ -400,7 +400,129 @@ footer {
     font-weight: bold;
 }
 
-/* Home Page */
+/* HOME PAGE */
+.trending-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.trending-design {
+    width: 1090px;
+    max-width: 100%;
+    margin-left: -100px;
+    margin-top: 20px;
+    padding: 20px 60px 28px;
+    background: var(--main-bg);
+    border: 6px solid var(--main-interface);
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(246, 230, 206, 5);
+}
+
+.trending-design h2 {
+    margin-bottom: 16px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.home-trending-row {
+    display: flex;
+    gap: 28px;
+}
+
+.trend-item {
+    position: relative;
+    width: 213px;
+    height: 102px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.trend-name {
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+    color: var(--text);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+.home-title-img {
+    height: 70px;
+    max-width: 100%;
+    margin-left: 40px;
+}
+
+.home-title {
+    margin: 70px 0 28px 60px;
+    font-size: 46px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 100px;
+    margin-left: -50px;
+}
+
+.spot-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 325px);
+    gap: 45px;
+    justify-content: center;
+    padding: 0 40px 0 60px;
+}
+
+.spot-card {
+    display: block;
+    overflow: hidden;
+    background: var(--main-interface);
+    border-radius: 25px;
+    color: var(--black);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.spot-card:hover,
+.spot-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.spot-photo {
+    height: 135px;
+}
+
+.spot-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spot-body {
+    padding: 10px 28px 14px;
+}
+
+.spot-name {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.spot-rating {
+    margin-top: 4px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.spot-star {
+    color: #FFE600;
+    -webkit-text-stroke: 0.5px var(--black);
+}
+
+/* BUSINESS DETAILS */
 
 
 
@@ -421,11 +543,7 @@ footer {
 
 
 
-
-
-
-
-/* About Page */
+/* ABOUT PAGE */
 .about h1 {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -492,7 +610,7 @@ footer {
     transform: translateY(-10px);
 }
 
-/* User Dashboard */
+/* USER DASHBOARD */
 .dash-layout {
     flex: 1;
     display: flex;
