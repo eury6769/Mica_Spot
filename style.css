@@ -463,6 +463,7 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 100px;
     margin-left: -50px;
+    margin-bottom: 60px;
 }
 
 .spot-grid {
@@ -523,25 +524,332 @@ a.spot-card:hover,
 }
 
 /* BUSINESS DETAILS */
+.shop-view > input[type="radio"] {
+    display: none;
+}
 
+.shop {
+    padding: 50px 130px 110px;
+}
 
+.shop-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--text);
+    font-size: 16px;
+    text-decoration: none;
+}
 
+.shop-back svg {
+    width: 20px;
+    height: 20px;
+}
 
+.shop-hero-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    padding-left: 120px;
+}
 
+.shop-photo-placeholder {
+    width: 400px;
+    height: 220px;
+    margin-top: 35px;
+    box-sizing: border-box;
+    border: 2px solid var(--main-interface);
+    background: transparent;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
 
+.shop-info-box {
+    position: relative;
+    flex: 1;
+    max-width: 740px;
+    min-height: 318px;
+    padding: 30px 55px 40px;
+    background: var(--main-interface);
+    border-radius: 30px;
+    color: var(--black);
+}
 
+.shop-info-box h1 {
+    font-size: 46px;
+    font-weight: bold;
+    color: var(--black);
+}
 
+.shop-rate {
+    margin: 20px 0 0 10px;
+    font-size: 17px;
+}
 
+.shop-star {
+    color: #FFE600;
+    -webkit-text-stroke: 1px var(--black);
+}
 
+.shop-address {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 14px 0 0 1px;
+    color: var(--placeholder);
+    font-size: 16px;
+}
 
+.shop-address svg {
+    width: 30px;
+    height: 30px;
+}
 
+.shop-hours {
+    margin: 25px 0 0 8px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
+.shop-maps {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
 
+.shop-tabs {
+    display: flex;
+    gap: 2px;
+    padding: 0 130px;
+    margin-top: -15px;
+    background: linear-gradient(to bottom, transparent 0 42px, var(--main-interface) 42px);
+    position: relative;
+}
 
+.shop-tabs label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 52px;
+    border-radius: 30px;
+    background: var(--main-interface);
+    color: var(--black);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
 
+.shop-tabs label:hover {
+    background: var(--main-bg);
+    color: var(--text);
+}
 
+#tab-menu:checked ~ .shop-tabs label[for="tab-menu"],
+#tab-reviews:checked ~ .shop-tabs label[for="tab-reviews"] {
+    background: var(--main-bg);
+    color: var(--text);
+}
 
+#tab-menu:checked ~ .shop-panels .shop-menu,
+#tab-reviews:checked ~ .shop-panels .shop-reviews {
+    display: block;
+}
 
+.shop-panels {
+    background: var(--main-interface);
+    color: var(--black);
+    min-height: 600px;
+}
+
+.shop-panel {
+    display: none;
+}
+
+.shop-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 50px;
+    padding: 50px 90px 120px;
+}
+
+.dish-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 25px 100px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.shop-reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    padding: 50px 100px 100px;
+    align-items: start;
+}
+
+.shop-overall {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: end;
+    column-gap: 14px;
+}
+
+.shop-big-star {
+    width: 80px;
+    height: 80px;
+}
+
+.shop-score {
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.shop-score-label {
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.shop-count {
+    grid-column: 1 / 3;
+    color: var(--placeholder);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.shop-heading {
+    margin: 60px 0 30px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.shop-review {
+    display: flex;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 4px solid var(--main-bg);
+}
+
+.shop-review:last-child {
+    border-bottom: none;
+}
+
+.shop-avatar {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #BFE3F7 60%, #7DA83A 60%);
+}
+
+.shop-reviewer {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.shop-stars-static {
+    color: #FFC400;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 6px;
+}
+
+.shop-date {
+    color: var(--placeholder);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shop-comment {
+    margin-top: 12px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shop-form {
+    padding: 40px 50px 200px;
+    border: 2px solid var(--main-bg);
+    border-radius: 40px;
+}
+
+.shop-form-title {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.shop-form-label {
+    display: block;
+    margin: 0 0 6px 4px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.shop-stars-display {
+    margin-bottom: 25px;
+    color: #FFC400;
+    font-size: 30px;
+    letter-spacing: 6px;
+    line-height: 1;
+}
+
+.shop-form textarea {
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding: 16px 20px;
+    border: 1px solid var(--placeholder);
+    border-radius: 20px;
+    background: var(--text);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    resize: none;
+    outline: none;
+}
+
+.shop-form textarea::placeholder {
+    color: var(--placeholder);
+    font-size: 16px;
+}
+
+.shop-submit {
+    display: block;
+    width: 70%;
+    height: 56px;
+    margin: 60px auto 0;
+    border: none;
+    border-radius: 30px;
+    background: var(--main-bg);
+    color: var(--text);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.shop-submit:hover {
+    background: var(--function);
+}
 
 /* ABOUT PAGE */
 .about h1 {
@@ -1274,6 +1582,1104 @@ a.spot-card:hover,
     color: var(--black);
 }
 
+.shop-view + footer {
+    margin-top: 0;
+}
+
 .dash-layout + footer {
     margin-top: 0;
+}
+
+/* Resolutions */ 
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+@media screen and (max-width: 1200px) {
+    .spot-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .trending-design {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .home-trending-row {
+        flex-wrap: wrap;
+    }
+
+    .shop-hero-main {
+        padding-left: 30px;
+        gap: 40px;
+    }
+
+    .shop {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .shop-tabs {
+        padding: 0 60px;
+    }
+
+    .shop-menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-container,
+    .manage-container,
+    .verify-container {
+        padding: 60px;
+    }
+
+    .field {
+        gap: 50px;
+    }
+
+    .profile {
+        margin-right: 0;
+    }
+
+    .dashboard {
+        padding: 60px 35px;
+    }
+
+    .cards {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .page {
+        padding: 40px 35px;
+    }
+
+    .bg {
+        padding: 40px 25px;
+        gap: 35px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .brand img {
+        height: 220px;
+    }
+
+    .logo-tagline {
+        font-size: 27px;
+        justify-content: center;
+    }
+
+    .logo-tagline::before,
+    .logo-tagline::after {
+        width: 100px;
+    }
+
+    .outer-layer {
+        width: min(100%, 600px);
+        height: auto;
+        min-height: 0;
+        padding: 25px;
+        border-radius: 40px;
+    }
+
+    .inner-layer {
+        min-height: 570px;
+        padding: 35px;
+        border-radius: 30px;
+    }
+
+    .navbar {
+        height: auto;
+        min-height: 85px;
+        padding: 15px 25px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        margin: 0 auto;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 0 18px;
+        font-size: 13px;
+    }
+
+    .logo img {
+        height: 42px;
+    }
+
+    .settings {
+        width: 43px;
+        height: 43px;
+        flex-shrink: 0;
+    }
+
+    footer {
+        padding: 30px 45px;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+
+    .trending-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .trending-design {
+        padding: 25px;
+    }
+
+    .home-title {
+        margin: 60px 0 35px;
+        font-size: 38px;
+    }
+
+    .home-title-img {
+        margin-left: 0;
+    }
+
+    .spot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        padding: 0;
+    }
+
+    .shop {
+        padding: 35px 30px 70px;
+    }
+
+    .shop-hero-main {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .shop-photo-placeholder {
+        width: 100%;
+        max-width: 550px;
+        margin-top: 0;
+    }
+
+    .shop-info-box {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .shop-tabs {
+        padding: 0 30px;
+        margin-top: 30px;
+    }
+
+    .shop-tabs label {
+        flex: 1;
+        width: auto;
+        font-size: 16px;
+    }
+
+    .shop-menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 40px;
+    }
+
+    .shop-form {
+        padding: 35px;
+    }
+
+    .about h1,
+    .team h1 {
+        font-size: 38px;
+    }
+
+    .team h1 {
+        margin-top: 100px;
+    }
+
+    .team-row {
+        gap: 55px;
+    }
+
+    .dash-layout {
+        flex-direction: column;
+    }
+
+    .dash-sidebar {
+        width: 100%;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        border-right: none;
+        border-bottom: 2px solid var(--secondary-bg-interface);
+    }
+
+    .dash-sidebar .button,
+    .dash-sidebar .lgt-button {
+        width: auto;
+        min-width: 145px;
+        padding: 0 15px;
+    }
+
+    .dashboard {
+        padding: 45px 25px;
+    }
+
+    .profile {
+        max-width: 700px;
+        margin: 0 auto 30px;
+    }
+
+    .board h1 {
+        margin: 60px 0 40px;
+        text-align: center;
+    }
+
+    .info-main {
+        padding: 35px 25px;
+    }
+
+    .info-container,
+    .manage-container,
+    .verify-container {
+        width: 100%;
+        min-height: 0;
+        padding: 45px;
+    }
+
+    .field {
+        flex-wrap: wrap;
+        gap: 35px;
+        padding-left: 0;
+        margin-top: 45px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .group input {
+        width: 100%;
+    }
+
+    .action {
+        margin: 50px 0 0;
+    }
+
+    .manage-container,
+    .verify-container {
+        gap: 35px;
+    }
+
+    .product-list {
+        padding: 35px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .bg {
+        padding: 30px 15px;
+    }
+
+    .brand img {
+        height: 170px;
+    }
+
+    .logo-tagline {
+        font-size: 22px;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .logo-tagline::before,
+    .logo-tagline::after {
+        width: 55px;
+    }
+
+    .outer-layer {
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    .inner-layer {
+        min-height: 520px;
+        padding: 25px 20px;
+        border-radius: 23px;
+    }
+
+    .inner-layer h1 {
+        font-size: 29px;
+    }
+
+    .tabs {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .tabs label {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .form {
+        height: 45px;
+        margin-bottom: 16px;
+    }
+
+    .form input,
+    .form input::placeholder {
+        font-size: 14px;
+    }
+
+    .button,
+    .lgt-button {
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-links {
+        order: 2;
+        width: 100%;
+        margin: 0;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        height: 38px;
+        padding: 0 13px;
+        font-size: 12px;
+    }
+
+    .settings {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 38px;
+        height: 38px;
+        background-size: 27px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 70px;
+    }
+
+    .footer-brand p {
+        font-size: 14px;
+    }
+
+    .contact-icons {
+        justify-content: center;
+    }
+
+    .trending-design {
+        padding: 20px;
+        border-width: 4px;
+        border-radius: 22px;
+    }
+
+    .trending-design h2 {
+        font-size: 21px;
+    }
+
+    .home-trending-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .trend-item {
+        width: 100%;
+        height: 100px;
+        border-radius: 17px;
+    }
+
+    .trend-name {
+        font-size: 13px;
+        left: 8px;
+        bottom: 8px;
+    }
+
+    .home-title {
+        font-size: 30px;
+        margin: 45px 0 30px;
+    }
+
+    .home-title-img {
+        height: 50px;
+    }
+
+    .spot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        padding: 0;
+    }
+
+    .spot-card {
+        border-radius: 17px;
+    }
+
+    .spot-photo {
+        height: 115px;
+    }
+
+    .spot-body {
+        padding: 10px 12px 13px;
+    }
+
+    .spot-name,
+    .spot-rating {
+        font-size: 13px;
+    }
+
+    .shop {
+        padding: 25px 18px 50px;
+    }
+
+    .shop-info-box {
+        min-height: 0;
+        padding: 25px;
+        border-radius: 22px;
+    }
+
+    .shop-info-box h1 {
+        font-size: 30px;
+    }
+
+    .shop-rate {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    .shop-address {
+        font-size: 13px;
+        align-items: flex-start;
+    }
+
+    .shop-address svg {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+    }
+
+    .shop-hours {
+        margin-top: 20px;
+        font-size: 13px;
+    }
+
+    .shop-maps {
+        position: static;
+        display: inline-block;
+        margin: 20px 0 0 8px;
+        font-size: 14px;
+    }
+
+    .shop-tabs {
+        padding: 0 15px;
+        margin-top: 25px;
+    }
+
+    .shop-tabs label {
+        height: 45px;
+        font-size: 14px;
+        border-radius: 15px;
+    }
+
+    .shop-menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 25px 18px 50px;
+    }
+
+    .dish-row {
+        margin: 45px 10px;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .shop-reviews-grid {
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .shop-score {
+        font-size: 45px;
+    }
+
+    .shop-big-star {
+        width: 55px;
+        height: 55px;
+    }
+
+    .shop-heading {
+        margin: 35px 0 20px;
+        font-size: 27px;
+    }
+
+    .shop-review {
+        gap: 13px;
+        padding: 18px 0;
+    }
+
+    .shop-avatar {
+        width: 43px;
+        height: 43px;
+    }
+
+    .shop-comment,
+    .shop-reviewer,
+    .shop-date {
+        font-size: 13px;
+    }
+
+    .shop-form {
+        padding: 25px 18px;
+        border-radius: 25px;
+    }
+
+    .shop-form-title {
+        margin: 35px 0;
+        font-size: 27px;
+    }
+
+    .shop-form textarea {
+        height: 200px;
+        font-size: 15px;
+    }
+
+    .shop-submit {
+        width: 100%;
+        margin-top: 30px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about h1,
+    .team h1 {
+        font-size: 30px;
+    }
+
+    .about h1 {
+        margin: 25px 0;
+    }
+
+    .about > p {
+        font-size: 14px;
+        margin-bottom: 35px;
+        text-indent: 25px;
+        line-height: 1.7;
+    }
+
+    .team h1 {
+        margin-top: 80px;
+        gap: 15px;
+    }
+
+    .team h1 img {
+        height: 40px;
+    }
+
+    .team-row {
+        gap: 40px;
+        margin-top: 45px;
+    }
+
+    .member {
+        width: 200px;
+    }
+
+    .member img {
+        width: 155px;
+        height: 155px;
+        margin-bottom: 20px;
+    }
+
+    .member p {
+        font-size: 14px;
+    }
+
+    .dash-sidebar {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .dash-sidebar .button,
+    .dash-sidebar .lgt-button {
+        min-width: 125px;
+        height: 45px;
+        line-height: 43px;
+        font-size: 12px;
+    }
+
+    .dashboard {
+        padding: 35px 18px;
+    }
+
+    .profile {
+        gap: 18px;
+        margin: 0 0 30px;
+    }
+
+    .memberr,
+    .memberr img {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .profile h1 {
+        font-size: 27px;
+    }
+
+    .profile .date {
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    .hello {
+        margin-bottom: 30px;
+    }
+
+    .board h1 {
+        font-size: 27px;
+        margin: 35px 0;
+    }
+
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        max-width: 190px;
+        height: 165px;
+        border-radius: 18px;
+    }
+
+    .card svg {
+        width: 43px;
+        height: 43px;
+    }
+
+    .card .num {
+        font-size: 29px;
+    }
+
+    .card .label {
+        font-size: 13px;
+    }
+
+    .info-main {
+        padding: 20px 15px;
+    }
+
+    .info-container,
+    .manage-container,
+    .verify-container {
+        padding: 30px 22px;
+        border-radius: 20px;
+    }
+
+    .info-container h1,
+    .product h1,
+    .product-section h1,
+    .verify-form h1 {
+        font-size: 29px;
+    }
+
+    .field {
+        margin-top: 35px;
+        gap: 25px;
+    }
+
+    .left-column,
+    .right-column {
+        max-width: 100%;
+        gap: 25px;
+    }
+
+    .group input,
+    .right-column .group input {
+        width: 100%;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .group label,
+    .form-label {
+        font-size: 14px;
+    }
+
+    .action,
+    .actions {
+        width: 100%;
+        margin: 35px 0 0;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .edit-btn,
+    .save-btn,
+    .actions .edit-btn,
+    .actions .save-btn {
+        width: 50%;
+        height: 48px;
+        font-size: 13px;
+    }
+
+    .manage-container,
+    .verify-container {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .product,
+    .product-section {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .product h1,
+    .product-section h1 {
+        margin-left: 0;
+    }
+
+    .add-image {
+        margin: 0 auto 25px;
+    }
+
+    .product .group input {
+        max-width: 100%;
+    }
+
+    .product .add-btn {
+        display: block;
+        max-width: 100%;
+        margin: 30px auto 0;
+    }
+
+    .product-list {
+        min-height: 0;
+        padding: 25px 15px;
+        gap: 22px;
+    }
+
+    .thumb {
+        width: 75px;
+        height: 60px;
+        border-radius: 14px;
+    }
+
+    .product-item {
+        gap: 10px;
+    }
+
+    .product-item .product-name,
+    .product-item .product-price {
+        font-size: 13px;
+    }
+
+    .verify-form h1 {
+        margin-bottom: 30px;
+    }
+
+    .upload-group {
+        padding-left: 0;
+    }
+
+    .file-btn {
+        margin-left: 0;
+    }
+
+    .verify-actions {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .actions .reset-bton,
+    .actions .save-bton {
+        width: 45%;
+        font-size: 13px;
+    }
+
+    .verify-status {
+        padding-top: 20px;
+    }
+
+    .verify-status .clock {
+        width: 110px;
+        height: 110px;
+    }
+
+    .verify-status h1 {
+        font-size: 27px;
+    }
+
+    .status-badge {
+        padding: 12px 35px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page {
+        padding: 25px 15px;
+    }
+
+    .navbar {
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        gap: 6px;
+    }
+
+    .nav-links a {
+        padding: 0 10px;
+        font-size: 11px;
+        height: 35px;
+    }
+
+    .home-title {
+        font-size: 26px;
+    }
+
+    .home-trending-row {
+        gap: 10px;
+    }
+
+    .trend-item {
+        height: 85px;
+    }
+
+    .trend-name {
+        font-size: 11px;
+    }
+
+    .spot-grid {
+        gap: 12px;
+    }
+
+    .spot-photo {
+        height: 95px;
+    }
+
+    .spot-body {
+        padding: 9px;
+    }
+
+    .spot-name,
+    .spot-rating {
+        font-size: 12px;
+    }
+
+    .shop-info-box {
+        padding: 20px;
+    }
+
+    .shop-info-box h1 {
+        font-size: 25px;
+    }
+
+    .shop-menu-grid {
+        gap: 15px;
+        padding: 20px 12px 40px;
+    }
+
+    .shop-score {
+        font-size: 38px;
+    }
+
+    .shop-overall {
+        column-gap: 8px;
+    }
+
+    .shop-big-star {
+        width: 43px;
+        height: 43px;
+    }
+
+    .shop-score-label {
+        font-size: 12px;
+    }
+
+    .shop-count {
+        font-size: 13px;
+    }
+
+    .shop-form-title {
+        font-size: 24px;
+    }
+
+    .team-row {
+        gap: 35px;
+    }
+
+    .member {
+        width: 100%;
+    }
+
+    .member img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .profile {
+        gap: 13px;
+    }
+
+    .memberr,
+    .memberr img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile h1 {
+        font-size: 23px;
+    }
+
+    .card {
+        height: 145px;
+    }
+
+    .card .num {
+        font-size: 25px;
+    }
+
+    .info-container,
+    .manage-container,
+    .verify-container {
+        padding: 25px 16px;
+    }
+
+    .info-container h1,
+    .product h1,
+    .product-section h1,
+    .verify-form h1 {
+        font-size: 25px;
+    }
+
+    .action,
+    .actions {
+        gap: 8px;
+    }
+
+    .edit-btn,
+    .save-btn,
+    .actions .edit-btn,
+    .actions .save-btn {
+        font-size: 12px;
+    }
+
+    .thumb {
+        width: 58px;
+        height: 52px;
+    }
+
+    .product-item .product-name,
+    .product-item .product-price {
+        font-size: 12px;
+    }
+
+    .product-item .icon-btn {
+        width: 25px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .nav-links a {
+        padding: 0 7px;
+        font-size: 10px;
+    }
+
+    .spot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spot-photo {
+        height: 150px;
+    }
+
+    .home-trending-row {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .dash-sidebar .button,
+    .dash-sidebar .lgt-button {
+        width: 100%;
+    }
+
+    .profile h1 {
+        font-size: 20px;
+    }
 }

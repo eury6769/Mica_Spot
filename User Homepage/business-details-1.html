@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mica Spot | Karinderya ni nene</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body class="web">
+        <header class="navbar">
+            <a href="./user-homepage.html" class="logo">
+                <img src="../Assets/mica-spot-logo.png" 
+                alt="Mica Spot Logo"
+                >
+            </a>
+
+            <nav class="nav-links">
+                <a href="./user-homepage.html">Home</a>
+                <a href="./user-about.html">About</a>
+            </nav>
+
+                <a class="settings" 
+                href="../User Dashboard/user-dashboard.html" 
+                aria-label="My account"></a>
+        </header>
+        
+        <div class="shop-view">
+
+            <input type="radio" name="shop-tab" id="tab-menu" checked>
+            <input type="radio" name="shop-tab" id="tab-reviews">
+
+            <section class="shop">
+                <a class="shop-back" href="./user-homepage.html">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 L7 12 L15 20" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Home
+                </a>
+
+                <div class="shop-hero-main">
+                    <div class="shop-photo shop-photo-placeholder"></div>
+
+                    <div class="shop-info-box">
+                        <h1>Karinderya ni nene</h1>
+
+                        <p class="shop-rate">4.4 <b class="shop-star">★</b></p>
+
+                        <p class="shop-address">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a6.5 6.5 0 0 0-6.5 6.5C5.5 13.5 12 21 12 21s6.5-7.5 6.5-12.5A6.5 6.5 0 0 0 12 2z" fill="#AE1D1D"/>
+                                <circle cx="12" cy="8.5" r="2.5" fill="#F6E6CE"/>
+                            </svg>
+                            456 Esmiringhoy St.
+                        </p>
+
+                        <p class="shop-hours">Open at 5am - 7pm</p>
+
+                        <button class="btn-maps shop-maps" type="button">Open in Google Maps</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="shop-tabs">
+                <label for="tab-menu">Menu</label>
+                <label for="tab-reviews">Reviews</label>
+            </div>
+
+            <div class="shop-panels">
+                <section class="shop-panel shop-menu">
+                    <div class="shop-menu-grid">
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Bopis</span><span>₱35</span></p>
+                        </div>
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Adobo</span><span>₱30</span></p>
+                        </div>
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Menudo</span><span>₱40</span></p>
+                        </div>
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Fried Chicken</span><span>₱25</span></p>
+                        </div>
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Sinigang</span><span>₱35</span></p>
+                        </div>
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Kare-Kare</span><span>₱30</span></p>
+                        </div>
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Ginataang Manok</span><span>₱40</span></p>
+                        </div>
+
+                        <div class="dish">
+                            <p class="dish-row"><span>Okoy</span><span>₱25</span></p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="shop-panel shop-reviews">
+                    <div class="shop-reviews-grid">
+
+                        <div class="shop-review-left">
+                            <div class="shop-overall">
+                                <svg class="shop-big-star" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 1 L15 9 L23 9.5 L16.800 14.500 L19 22.500 L12 18 L5 22.500 L7.200 14.500 L1 9.500 L9 9 Z" fill="#FFE600"/>
+                                </svg>
+                                <span class="shop-score">4.4</span>
+                                <span class="shop-score-label">Overall Rating</span>
+                                <span class="shop-count">(1.2k reviews)</span>
+                            </div>
+
+                            <h2 class="shop-heading">Customer Reviews</h2>
+
+                            <article class="shop-review">
+                                <div class="shop-avatar"></div>
+                                <div class="shop-review-body">
+                                    <p class="shop-reviewer">Jedidea Ganda</p>
+                                    <p class="shop-stars-static">★★★★★</p>
+                                    <p class="shop-date">Jan 15, 2008</p>
+                                    <p class="shop-comment">masarap, uulit-ulitin</p>
+                                </div>
+                            </article>
+
+                            <article class="shop-review">
+                                <div class="shop-avatar"></div>
+                                <div class="shop-review-body">
+                                    <p class="shop-reviewer">Kremabibi</p>
+                                    <p class="shop-stars-static">★★★★★</p>
+                                    <p class="shop-date">Jan 15, 2008</p>
+                                    <p class="shop-comment">sarap dito promise!</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <form class="shop-form" action="#">
+                            <h2 class="shop-form-title">REVIEW FORM</h2>
+
+                            <p class="shop-form-label">Rating</p>
+                            <p class="shop-stars-display">★★★★★</p>
+                            
+                            <label class="shop-form-label" for="comment">Comment</label>
+                            <textarea id="comment" name="comment" placeholder="Write your review..."></textarea>
+
+                            <button class="shop-submit" type="submit">Submit</button>
+                        </form>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-brand">
+                <img src="../Assets/mica-spot-name.png" 
+                alt="Mica Spot"
+                >
+                <p>Discover your one-stop spot here at binan! A website that will help you explore the delicious meals our local spots can offer.</p>
+            </div>
+
+            <div class="contact">
+                Contact Us
+                <div class="contact-icons">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Phone">&#9742;</a>
+                    <a href="#" aria-label="Email address">@</a>
+                    <a href="#" aria-label="Message">&#9993;</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
