@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mica Spot | Log-in</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>Mica Spot | Sign-up</title>
         <link rel="stylesheet" href="/CSS/style.css">
     </head>
 
@@ -13,7 +12,8 @@
             <section class="brand">
                 <img src="/Assets/mica-spot-logo.png" alt="mica-spot-logo">
                 <div class="logo-tagline">Your One-Stop 
-                    <br>Spot</div>
+                    <br>Spot
+                </div>
             </section>
 
             <div class="outer-layer">
@@ -28,8 +28,8 @@
                     </div>
 
 
-                    <form class="user-form" action="/User Homepage/user-homepage.html" method="get">
-                        <h1>User Log in</h1>
+                    <form class="user-form" action="index.html" method="get">
+                        <h1>User Sign up</h1>
 
                         <div class="form">
                             <input type="text" 
@@ -47,17 +47,27 @@
                             >
                         </div>
 
-                        <label class="remember">
-                            <input type="checkbox"
-                            name="remember">
-                            Remember me
-                        </label>
+                        <div class="form">
+                            <input type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                            >
+                        </div>
+
+                        <div class="form">
+                            <input type="tel"
+                            name="num"
+                            placeholder="Contact Number"
+                            required
+                            >
+                        </div>
                         
-                        <button class="button">Log in</button>
+                        <button class="button">Sign up</button>
                     </form>
 
-                    <form class="owner-form" action="/index.html" method="get">
-                        <h1>Owner Log in</h1>
+                    <form class="owner-form" action="index.html" method="get">
+                        <h1>Owner Sign up</h1>
 
                         <div class="form">
                             <input type="text" 
@@ -75,19 +85,28 @@
                             >
                         </div>
 
-                        <label class="remember">
-                            <input type="checkbox"
-                            name="remember">
-                            Remember me
-                        </label>
-                        
-                        <button class="button">Log in</button>
+                        <div class="form">
+                            <input type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                            >
+                        </div>
+
+                        <div class="form">
+                            <input type="tel"
+                            name="num"
+                            placeholder="Contact Number"
+                            required
+                            >
+                        </div>
+            
+                        <button class="button">Sign up</button>
                     </form>
 
-
-                    <a class="link" href="#">Forgot Password?</a>
-                    <div class="or">---------------- or ----------------</div>
-                    <a class="lgt-button" href="/Login-Signup/signup.html">Create an account</a>
+                    <p class="ask">Already have an account?<a class="lnk" href="index.html">
+                    Back to Log in
+                    </a></p>
                 </div>
             </div>
         </main>

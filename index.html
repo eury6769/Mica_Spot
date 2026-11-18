@@ -3,32 +3,93 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mica Spot | Home Page</title>
+        <title>Mica Spot | Log-in</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/CSS/style.css">
     </head>
 
-    <body class="web">
-            <header class="navbar">
-                <a href="index.html" class="logo">
-                    <img src="./Assets/mica-spot-logo.png" 
-                    alt="Mica Spot Logo"
-                    >
-                </a>
+    <body>
+        <main class="bg">
+            <section class="brand">
+                <img src="/Assets/mica-spot-logo.png" alt="mica-spot-logo">
+                <div class="logo-tagline">Your One-Stop 
+                    <br>Spot</div>
+            </section>
 
-                <nav class="nav-links">
-                    <a href="index.html" aria-current="page">Home</a>
-                    <a href="owner-about.html">About</a>
-                </nav>
+            <div class="outer-layer">
+                <div class="inner-layer">
 
-                  <a class="settings" 
-                  href="/Owner Dashboard/owner-dashboard.html" 
-                  aria-label="Log in"></a>
-            </header>
+                    <input type="radio" id="owner" name="account">
+                    <input type="radio" id="user" name="account" checked>
+
+                    <div class="tabs">
+                        <label for="user">User</label>
+                        <label for="owner">Owner</label>
+                    </div>
 
 
+                    <form class="user-form" action="/User Homepage/user-homepage.html" method="get">
+                        <h1>User Log in</h1>
+
+                        <div class="form">
+                            <input type="text" 
+                            name="username" 
+                            placeholder="Username"
+                            required
+                            >
+                        </div>
+
+                        <div class="form">
+                            <input type="password" 
+                            name="password" 
+                            placeholder="Password"
+                            required
+                            >
+                        </div>
+
+                        <label class="remember">
+                            <input type="checkbox"
+                            name="remember">
+                            Remember me
+                        </label>
+                        
+                        <button class="button">Log in</button>
+                    </form>
+
+                    <form class="owner-form" action="/Owner Homepage/owner-homepage.html" method="get">
+                        <h1>Owner Log in</h1>
+
+                        <div class="form">
+                            <input type="text" 
+                            name="username" 
+                            placeholder="Username"
+                            required
+                            >
+                        </div>
+
+                        <div class="form">
+                            <input type="password" 
+                            name="password" 
+                            placeholder="Password"
+                            required
+                            >
+                        </div>
+
+                        <label class="remember">
+                            <input type="checkbox"
+                            name="remember">
+                            Remember me
+                        </label>
+                        
+                        <button class="button">Log in</button>
+                    </form>
 
 
-        </div>
-        
+                    <a class="link" href="#">Forgot Password?</a>
+                    <div class="or">---------------- or ----------------</div>
+                    <a class="lgt-button" href="/signup.html">Create an account</a>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
