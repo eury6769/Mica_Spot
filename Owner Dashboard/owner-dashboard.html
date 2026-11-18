@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mica Spot | Owner Dashboard</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body class="web">
+        <header class="navbar">
+            <a href="../Owner Homepage/owner-homepage.html" class="logo">
+                <img src="../Assets/mica-spot-logo.png" alt="Mica Spot Logo">
+            </a>
+
+            <nav class="nav-links">
+                <a href="../Owner Homepage/owner-homepage.html">Home</a>
+                <a href="../Owner Homepage/owner-about.html">About</a>
+            </nav>
+
+            <a class="settings"
+               href="./owner-dashboard.html"
+               aria-label="Owner Dashboard"></a>
+        </header>
+
+        <div class="dash-layout">
+            <aside class="dash-sidebar">
+                <a class="button" href="./owner-dashboard.html" aria-current="page">Dashboard</a>
+                <a class="lgt-button" href="./manage-products.html">Manage Products</a>
+                <a class="lgt-button" href="#">Business Information</a>
+                <a class="lgt-button" href="#">Verification</a>
+                <a class="lgt-button" href="../index.html">Log Out</a>
+            </aside>
+
+            <main class="dashboard">
+                <section class="profile">
+                    <div class="memberr">
+                        <img src="../Assets/user-owner.jpg" alt="Profile Picture">
+                    </div>
+
+                    <div class="hello">
+                        <h1>Welcome back, owner</h1>
+                        <p class="date">Member since 2026</p>
+                    </div>
+                </section>
+
+                <section class="board">
+                    <h1>Business Overview</h1>
+
+                    <div class="cards">
+                        <div class="card">
+                            <svg viewBox="0 0 64 56" aria-hidden="true"><path d="M32 3L8 15v26l24 12 24-12V15z" fill="#000"/><path d="M8 15l24 12 24-12M32 27v26" fill="none" stroke="#F6E6CE" stroke-width="3" stroke-linejoin="round"/></svg>
+                            <span class="num">3</span>
+                            <span class="label">Products</span>
+                        </div>
+
+                        <div class="card">
+                            <svg viewBox="0 0 64 56" aria-hidden="true"><polygon points="32,2 40,22 62,22 44,35 51,54 32,42 13,54 20,35 2,22 24,22" fill="#FFEB00"/></svg>
+                            <span class="num">4.2</span>
+                            <span class="label">Rating</span>
+                        </div>
+
+                        <div class="card">
+                            <svg viewBox="0 0 64 56" aria-hidden="true"><path d="M10 5h44v34H30L17 50V39h-7z" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round"/><path d="M20 17h24M20 26h17" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/></svg>
+                            <span class="num">6</span>
+                            <span class="label">Reviews</span>
+                        </div>
+
+                        <div class="card">
+                            <svg viewBox="0 0 64 56" aria-hidden="true"><rect x="8" y="32" width="12" height="20" rx="2" fill="#9E1B16"/><rect x="26" y="20" width="12" height="32" rx="2" fill="#9E1B16"/><rect x="44" y="6" width="12" height="46" rx="2" fill="#9E1B16"/></svg>
+                            <span class="num">1k</span>
+                            <span class="label">Visited</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <div class="footer-brand">
+                <img src="../Assets/mica-spot-name.png" alt="Mica Spot">
+                <p>Discover your one-stop spot here at binan! A website that will help you explore the delicious meals our local spots can offer.</p>
+            </div>
+
+            <div class="contact">
+                Contact Us
+                <div class="contact-icons">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Phone">&#9742;</a>
+                    <a href="#" aria-label="Email address">@</a>
+                    <a href="#" aria-label="Message">&#9993;</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
