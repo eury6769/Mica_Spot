@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+ <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f3e6d3; /* Warm cream background */
+      color: #1f1f1f;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Hero Banner Section */
+    .hero-section {
+      background-color: #7a1414; /* Deep maroon */
+      background-image: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+      padding: 25px 60px 0 60px;
+      position: relative;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      color: #f3e6d3;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      gap: 6px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Restaurant Header Card Container */
+    .restaurant-header {
+      display: flex;
+      gap: 35px;
+      align-items: stretch;
+      max-width: 1100px;
+      margin: 0 auto 45px auto;
+    }
+
+    .restaurant-photo {
+      width: 380px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
+    }
+
+    .info-card {
+      background-color: #f3e6d3;
+      border-radius: 20px;
+      padding: 28px 35px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-card h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .star-icon {
+      color: #e6b800;
+      font-size: 18px;
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .pin-icon {
+      color: #b31b1b;
+      font-size: 16px;
+    }
+
+    .hours {
+      font-size: 14px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    .maps-btn {
+      background-color: #a81c1c;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .maps-btn:hover {
+      background-color: #8a1515;
+    }
+
+    /* Folder-style Tabs */
+    .tabs-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 6px;
+    }
+
+    .tab {
+      padding: 12px 48px;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background-color 0.2s;
+    }
+
+    .tab.active {
+      background-color: #f3e6d3;
+      color: #1f1f1f;
+    }
+
+    .tab.inactive {
+      background-color: #a81c1c;
+      color: #ffffff;
+    }
+
+    .tab.inactive:hover {
+      background-color: #911717;
+    }
+
+    /* Menu Grid Section */
+    .content-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 70px 20px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px 30px;
+    }
+
+    .menu-item {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px 30px;
+    }
+
+    .menu-item img {
+        width: 200px;
+        height: 155px;
+        object-fit: cover;
+        border-radius: 24px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+
+    .item-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1f1f1f;
+    }
+
+    .content-section {
+        flex: 1; 
+        width: 100%;
+        max-width: none;
+        margin-bottom: 0; 
+        background-color: #f3e6d3;
+        padding: 40px 60px;
+        box-sizing: border-box;
+        }
+
+    footer {
+        margin-top: 0;
+    }
+
+
+    /* Responsive Adjustments */
+    @media (max-width: 900px) {
+      .hero-section {
+        padding: 20px 25px 0 25px;
+      }
+      .restaurant-header {
+        flex-direction: column;
+      }
+      .restaurant-photo {
+        width: 100%;
+        height: 220px;
+      }
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+      .tab {
+        padding: 10px 30px;
+      }
+    }
+  </style>
+
+<body class="web">
+     <header class="navbar">
+                <a href="./user-homepage.html" class="logo">
+                    <img src="../Assets/mica-spot-logo.png" 
+                    alt="Mica Spot Logo"
+                    >
+                </a>
+
+                <nav class="nav-links">
+                    <a href="./user-homepage.html" aria-current="page">Home</a>
+                    <a href="./user-about.html">About</a>
+                </nav>
+
+                  <a class="settings" 
+                  href="../User Dashboard/user-dashboard.html" 
+                  aria-label="Log in"></a>
+            </header>
+
+            <a href="#" class="back-link">&#10094; Home</a>
+
+            <div class="restaurant-header">
+            <img 
+                src="../Assets/bg.jpg" 
+                alt="Karinderya ni nene food display" 
+                class="restaurant-photo"
+            >
+
+            <div class="info-card">
+                <div>
+                <h1>Karinderya ni nene</h1>
+                <div class="rating">
+                    <span>4.4</span>
+                    <span class="star-icon">&#9733;</span>
+                </div>
+                <div class="location">
+                    <span class="pin-icon">&#128205;</span>
+                    <span>456 Esmiringhoy St.</span>
+                </div>
+                <div class="hours">Open at 5am - 7pm</div>
+                </div>
+
+                <div class="card-footer">
+                <a href="https://google.com" target="_blank" class="maps-btn">Open in Google Maps</a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Folder Tabs -->
+            <div class="tabs-container">
+            <button class="tab active" onclick="switchTab('menu', this)">Menu</button>
+            <button class="tab inactive" onclick="switchTab('reviews', this)">Reviews</button>
+            </div>
+
+        <!-- Main Content Area -->
+        <main class="content-section">
+            <!-- Menu Tab Content -->
+            <div id="menu-view" class="menu-grid">
+            <!-- Row 1 -->
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Bopis">
+                <div class="item-details">
+                <span>BOPIS</span>
+                <span>&#8369;35</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Adobo">
+                <div class="item-details">
+                <span>ADOBO</span>
+                <span>&#8369;30</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Menudo">
+                <div class="item-details">
+                <span>MENUDO</span>
+                <span>&#8369;40</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Fried Chicken">
+                <div class="item-details">
+                <span>Fried Chicken</span>
+                <span>&#8369;25</span>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Bopis">
+                <div class="item-details">
+                <span>BOPIS</span>
+                <span>&#8369;35</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Adobo">
+                <div class="item-details">
+                <span>ADOBO</span>
+                <span>&#8369;30</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Menudo">
+                <div class="item-details">
+                <span>MENUDO</span>
+                <span>&#8369;40</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Fried Chicken">
+                <div class="item-details">
+                <span>Fried Chicken</span>
+                <span>&#8369;25</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="https://unsplash.com" alt="Bopis">
+                <div class="item-details">
+                <span>BOPIS</span>
+                <span>&#8369;35</span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Reviews Tab Content (Hidden by default) -->
+            <div id="reviews-view" style="display: none; padding: 20px 0;">
+            <h3>Customer Reviews</h3>
+            <p style="margin-top: 10px; color: #555;">No reviews displayed yet. Add customer feedback cards here.</p>
+            </div>
+            </main>
+
+            <footer>
+                <div class="footer-brand">
+                    <img src="../Assets/mica-spot-name.png" 
+                    alt="Mica Spot"
+                    >
+                    <p>Discover your one-stop spot here at binan! A website that will help you explore the delicious meals our local spots can offer.</p>
+                </div>
+
+                <div class="contact">
+                    Contact Us
+                    <div class="contact-icons">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Phone">&#9742;</a>
+                        <a href="#" aria-label="Email address">@</a>
+                        <a href="#" aria-label="Message">&#9993;</a>
+                    </div>
+                </div>
+            </footer>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
