@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mica Spot | My Account</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    
+    <body class="web">
+        <header class="navbar">
+            <a href="../User Homepage/user-homepage.html" class="logo">
+                <img src="../Assets/mica-spot-logo.png" 
+                alt="Mica Spot Logo"
+                >
+            </a>
+
+            <nav class="nav-links">
+                <a href="../User Homepage/user-homepage.html">Home</a>
+                <a href="../User Homepage/user-about.html">About</a>
+            </nav>
+
+                <a class="settings" 
+                href="./user-dashboard.html" 
+                aria-label="My Account"></a>
+        </header>
+
+        <div class="dash-layout">
+            <aside class="dash-sidebar">
+                <a class="button" href="#">DashBoard</a>
+                <a class="button" href="#">Manage Products</a>
+                <a class="lgt-button" href="../Owner Dashboard/bussinesss-info.html" >Bussiness Information</a>
+                <a class="lgt-button" href="../Owner Dashboard/verification.html" aria-current="page" >Verificaton</a>
+                <a class="lgt-button" href="../index.html">Log Out</a>
+            </aside>
+
+              <div class="shell">
+                 <main class="view">
+               <div class="panel" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                     <form action="owner-verification.html"><h2>Business Verification</h2>
+                         <label class="lbl">🛡 Business ID<input class="file" type="file" name="id" accept="image/*,.pdf"></label>
+                         <label class="lbl">🛡 Mayor's Business Permit<input class="file" type="file" name="permit" accept="image/*,.pdf"></label>
+                         <label class="lbl">🛡 BIR Registration<input class="file" type="file" name="bir" accept="image/*,.pdf"></label>
+                               <div class="btns"><button type="reset" class="b w">Reset</button><button class="b">Save Verification</button></div></form>
+                          <div class="status"><div class="ico">🕒</div><h3>Verification Status</h3><span class="badge">Pending</span><p>Your documents are under review.<br>You’ll be notified soon.</p></div>
+                     </div>
+                </main>
+            </div>
+                                 
+            
